@@ -12,7 +12,8 @@ class Perceptron{
 		std::vector<double> weights;
 		double bias;
 		Perceptron(size_t inputs, double bias=1.0);
-    double run(std::vector<double> x);
+    	
+		double run(std::vector<double> x);
 		void set_weights(std::vector<double> w_init);
 		double sigmoid(double x);
 };
@@ -28,7 +29,7 @@ class MultiLayerPerceptron{
 		std::vector<size_t> layers;
 		double bias;
 		double eta;
-		std::vector<std::vector<Perceptron> > network;
-		std::vector<std::vector<double> > values;
-		std::vector<std::vector<double> > d;
+		std::vector<std::vector<Perceptron> > network; // represent the network.
+		std::vector<std::vector<double> > values; // values from neurons.
+		std::vector<std::vector<double> > d; // error terms of the neurons.
 };
